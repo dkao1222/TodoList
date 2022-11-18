@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= people_data.nick_name %></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>People_id: </td>
+        <td><%= people_data.id %></td>
+      </tr>
+      <tr>
+        <td>people_name: </td>
+        <td><%= people_data.name %></td>
+      </tr>
+       <tr>
+        <td>people_nick_name: </td>
+        <td><%= people_data.nick_name %></td>
+      </tr>
+    </table>
+    <br>
+    <p>Go back to <a href="/people/read">people_read</a> page.</p>    
+  </body>
+</html>
