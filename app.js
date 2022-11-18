@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const Money = require("./modules/money");
 const Cookie = require("./modules/cookie");
 const People = require("./modules/people");
+const PORT = 3000;
 // 圖片
 const multer = require("multer");
 const storage = multer.diskStorage({
@@ -202,6 +203,6 @@ app.get("/people/map/update", (req, res) => {
   res.render("map_update.ejs");
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("server running localhost 3000");
 });
