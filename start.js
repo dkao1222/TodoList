@@ -40,6 +40,6 @@ app.use(function (req, res, next) {
 });
 
 
-const server = app.listen(port,host, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
     console.log(`Express is running on port ${server.address().port}`);
 });
