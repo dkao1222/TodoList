@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const ejs = require("ejs");
+const path = require('path')
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const Money = require("./modules/money");
@@ -20,10 +21,7 @@ const storage = multer.diskStorage({
   },
 });
 
-app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
-app.use('/jquery', express.static(path.join(__dirname, '../node_modules/jquery')))
-app.use('/popper', express.static(path.join(__dirname, '../node_modules/@popperjs/core/dist')))
-app.use('/ionicons', express.static(path.join(__dirname, '../node_modules/ionicons')))
+
 
 
 // photo middleware
@@ -53,7 +51,10 @@ mongoose
     console.log(e);
   });
 
-
+  app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
+  app.use('/jquery', express.static(path.join(__dirname, '../node_modules/jquery')))
+  app.use('/popper', express.static(path.join(__dirname, '../node_modules/@popperjs/core/dist')))
+  app.use('/ionicons', express.static(path.join(__dirname, '../node_modules/ionicons')))
 
 
 app.use('/', services);
