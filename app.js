@@ -19,6 +19,13 @@ const storage = multer.diskStorage({
     cb(null, file.fieldname + "-" + Date.now());
   },
 });
+
+app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
+app.use('/jquery', express.static(path.join(__dirname, '../node_modules/jquery')))
+app.use('/popper', express.static(path.join(__dirname, '../node_modules/@popperjs/core/dist')))
+app.use('/ionicons', express.static(path.join(__dirname, '../node_modules/ionicons')))
+
+
 // photo middleware
 let upload = multer({ storage: storage });
 
@@ -46,10 +53,7 @@ mongoose
     console.log(e);
   });
 
-app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
-app.use('/jquery', express.static(path.join(__dirname, '../node_modules/jquery')))
-app.use('/popper', express.static(path.join(__dirname, '../node_modules/@popperjs/core/dist')))
-app.use('/ionicons', express.static(path.join(__dirname, '../node_modules/ionicons')))
+
 
 
 app.use('/', services);
