@@ -204,14 +204,5 @@ app.get("/people/map/update", (req, res) => {
 });
 
 
-app.get("/", (req, res) => {
-  res.send('Hello world')
-});
-//
-//  app.listen(PORT, () => {
-//    console.log("server running localhost 3000");
-//  });
-//
-
 
 module.exports = app;
