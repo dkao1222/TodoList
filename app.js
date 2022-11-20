@@ -51,6 +51,8 @@ mongoose
     console.log(e);
   });
 
+  app.use('/assist', express.static(path.join(__dirname, './assist')))
+
   app.use('/bootstrap', express.static(path.join(__dirname, './node_modules/bootstrap/dist')))
   app.use('/jquery', express.static(path.join(__dirname, './node_modules/jquery')))
   app.use('/popper', express.static(path.join(__dirname, './node_modules/@popperjs/core/dist')))
