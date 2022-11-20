@@ -56,7 +56,7 @@ app.use('/', services);
 
 app.get('/', function(req, res) {
   const rendeData = { title: `Welcome` };
-  res.render("Home/home.ejs", rendeData);
+  res.render("home/home.ejs", rendeData);
 })
 
 module.exports = app;
