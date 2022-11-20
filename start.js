@@ -9,7 +9,7 @@ const ip = require('dns').lookup(require('os').hostname(), function (err, add, f
 
 const host = os.hostname();
 const port = '3000';
-
+/*
 app.use(function (req, res, next) {
 
     let url = 'http://' + host + ':3000'
@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
-
+*/
 
 const server = app.listen(process.env.PORT || 3000, () => {
     console.log(`Express is running on port ${server.address().port}`);
