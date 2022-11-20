@@ -12,7 +12,7 @@ const port = '3000';
 
 app.use(function (req, res, next) {
 
-    /*let url = 'http://' + host + ':3000'
+    let url = 'http://' + host + ':3000'
     let ips = 'http://' + ip + ':3000'
 
     const allowedOrigins = [url, ips];
@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
     if (allowedOrigins.includes(origin)) {
         // Website you wish to allow to connect
         res.setHeader('Access-Control-Allow-Origin', origin);
-    }*/
+    }
 
     //res.setHeader('Access-Control-Allow-Origin', url);
     //res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
