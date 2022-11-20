@@ -203,6 +203,10 @@ app.get("/people/map/update", (req, res) => {
   res.render("map_update.ejs");
 });
 
+
+app.get("/", (req, res) => {
+  res.send('Hello world')
+});
 //
 //  app.listen(PORT, () => {
 //    console.log("server running localhost 3000");
